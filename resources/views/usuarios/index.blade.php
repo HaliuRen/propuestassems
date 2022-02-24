@@ -3,7 +3,9 @@
 @section('title', 'Dashboard')
 
 @section('css')
-<link rel="stylesheet" href="{{ asset('vendor/DataTables/css/dataTables.bootstrap5.min.css') }}">
+
+    <link rel="stylesheet" href="{{ asset('vendor/DataTables/css/dataTables.bootstrap5.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('vendor/propuestas/css/propuestas.css') }}">
 @stop
 
 @section('content_header')
@@ -24,11 +26,11 @@
         <table class="table table-striped" id="usuarios" >
             <thead class="">
                 <tr>
-                    <th>ID</th>
-                    <th>EMAIL</th>
-                    <th>NOMBRE</th>
-                    <th>FECHA CREACIÓN</th>
-                    <th>ACCIONES</th>
+                    <th class="ffPoppins">Id</th>
+                    <th>Email</th>
+                    <th>Nombre</th>
+                    <th>Fecha de creación</th>
+                    <th>Acciones</th>
                 </tr>
             </thead>
             {{-- <tbody>

@@ -12,11 +12,11 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function user(){
+    public function user()
+    {
         $users = User::select('id', 'email', 'name', 'created_at')->get();
 
         return datatables()->of($users)
-            
             ->addColumn('actions', 'usuarios.action')
             ->rawColumns(['actions'])
             ->toJson();
