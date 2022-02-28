@@ -14,7 +14,7 @@ class UserController extends Controller
      */
     public function user()
     {
-        $users = User::select('id', 'email', 'name', 'created_at')->get();
+        $users = User::select('id', 'username', 'name', 'created_at')->get();
 
         return datatables()->of($users)
             ->addColumn('actions', 'usuarios.action')
@@ -24,9 +24,7 @@ class UserController extends Controller
 
     public function index()
     {
-        // $users = User::all();
 
-        // return view('usuarios.index' , compact('users'));
         return view('usuarios.index');
     }
 

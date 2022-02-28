@@ -3,7 +3,6 @@
 @section('title', 'Dashboard')
 
 @section('css')
-
     <link rel="stylesheet" href="{{ asset('vendor/DataTables/css/dataTables.bootstrap5.min.css') }}">
     <link rel="stylesheet" href="{{ asset('vendor/propuestas/css/propuestas.css') }}">
 @stop
@@ -22,12 +21,12 @@
 
 @section('content')
 
-    <div class="col-md-12 mx-auto bg-white p-4 mt-4 rounded">
-        <table class="table table-striped" id="usuarios" >
+    <div class="col-md-12 mx-auto bg-white p-4 mt-4 rounded ">
+        <table class="table table-striped border border-2 rounded" id="usuarios" >
             <thead class="">
                 <tr>
-                    <th class="ffPoppins">Id</th>
-                    <th>Email</th>
+                    <th>Id</th>
+                    <th>Username</th>
                     <th>Nombre</th>
                     <th>Fecha de creación</th>
                     <th>Acciones</th>
@@ -77,7 +76,7 @@
                         data: 'id'
                     },
                     {
-                        data: 'email'
+                        data: 'username'
                     },
                     {
                         data: 'name'
